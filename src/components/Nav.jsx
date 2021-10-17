@@ -3,7 +3,16 @@ import styled from "styled-components"
 
 const StyledNav = styled.nav`
   vertical-align: 5%;
+
+  position: fixed; 
+  top: 0; 
+  right: 38px; 
   text-align: right;
+  width: 90%;
+  color: #ff8000;
+  background-color: #edf2ef;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #8faaab;
 
   a {
     color: #233d4d;
@@ -11,8 +20,12 @@ const StyledNav = styled.nav`
     text-decoration: none;
   }
 
+  a:hover {
+    color: #8faaab;
+  }
+
   svg {
-    max-width: 18px;
+    max-width: 17px;
     position: relative;
     top: 3px;
   }
@@ -21,11 +34,14 @@ const StyledNav = styled.nav`
 const Nav = () => {
     return (
         <StyledNav>
-            <span>- </span>
+            <br/>
+            <span>/ </span>
+            <a href="">About</a>
+            <span>/ </span>
             <a href="./projects.html">Projects</a>
-            <span>- </span>
+            <span>/ </span>
             <a href="mailto:jclleggett@gmail.com" target="_blank">Contact</a>
-            <span>    - </span>
+            <span>/ </span>
             <a href="https://github.com/johnbearfc" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

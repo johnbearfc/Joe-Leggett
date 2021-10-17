@@ -15,22 +15,32 @@ const Main = styled.main`
 `
 
 const Heading = styled.h1`
-  font-size: 50px;
+  font-size: 70px;
   margin-top: 140px;
-  margin-bottom: 64px;
-  max-width: 350px;
+  margin-bottom: 26px;
+  max-width: 400px;
   line-height: 0.7;
   font-weight: 1000;
 `
 
 const SubH = styled.span`
   color: #8faaab;
-  font-size: 15px;
+  font-size: 18px;
+  max-width: 400px;
+
+  span {
+    color: #ff8000;
+  }
 `
 
 const SubHLink = styled.a`
   color: #8faaab;
-  font-size: 15px;
+  font-size: 18px;
+  text-decoration: none;
+
+  :hover {
+    color: #233d4d;
+  }
 `
 
 // markup
@@ -42,8 +52,11 @@ const IndexPage = () => {
       <Heading>
         Joe Leggett
         <br />
-        <SubH><SubHLink href="https://northcoders.com/" target="blank">Northcoders</SubHLink> student and software developer based in Manchester, UK</SubH>
       </Heading>
+        <SubH>
+          <span>/ </span>
+          <SubHLink href="https://northcoders.com/" target="blank">Northcoders</SubHLink> student and software developer <br/>based in Manchester, UK
+        </SubH>
     </Main>
   )
 }
