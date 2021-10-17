@@ -1,13 +1,15 @@
 import * as React from "react"
 import Nav from "../components/Nav"
 import styled from "styled-components"
+import About from "../components/About"
+import Projects from "../components/Projects"
 
 // styles
 const Main = styled.main`
   color: #233d4d;
   background-color: #edf2ef;
-  padding-left: 96px;
-  padding-right: 96px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 100%;
   padding-top: 20px;
   margin: 0px;
@@ -21,6 +23,8 @@ const Heading = styled.h1`
   max-width: 400px;
   line-height: 0.7;
   font-weight: 1000;
+  padding-right: 96px;
+
 `
 
 const SubH = styled.span`
@@ -57,6 +61,8 @@ const IndexPage = () => {
           <span>/ </span>
           <SubHLink href="https://northcoders.com/" target="blank">Northcoders</SubHLink> student and software developer <br/>based in Manchester, UK
         </SubH>
+      <About/>
+      <Projects/>
     </Main>
   )
 }

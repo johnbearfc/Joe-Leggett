@@ -5,6 +5,7 @@ const StyledNav = styled.nav`
   vertical-align: 5%;
 
   position: fixed; 
+  z-index: 2;
   top: 0; 
   right: 38px; 
   text-align: right;

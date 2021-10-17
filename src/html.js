@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 const html = {
   margin: 0,
   marginTop: '30px',
-  position: 'fixed',
   backgroundColor: "#edf2ef",
 }
 
