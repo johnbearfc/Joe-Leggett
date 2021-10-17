@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 // styles
 const pageStyles = {
+  backgroundColor: 'rgb(240, 237, 233)',
   color: "#232129",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
