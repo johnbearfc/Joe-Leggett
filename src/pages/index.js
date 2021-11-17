@@ -12,7 +12,6 @@ const Main = styled.main`
 
   padding-left: 3%;
   padding-right: 3%;
-  padding-bottom: 100%;
   padding-top: 20px;
   margin: 2%;
   font-family: "Syne", sans-serif;
