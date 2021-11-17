@@ -104,7 +104,7 @@ const ProjectWrapper = styled.section`
 
 const Projects = () => {
   return (
-    <ProjectsSection>
+    <ProjectsSection id="projects">
       <h1 className="section-title">
         <span className="dash">-</span> PROJECTS :
       </h1>

@@ -14,6 +14,10 @@ const AboutSection = styled.div`
   border-top: 2px solid #0b0d0d;
 
   margin-top: 140px;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin: 140px 0 0 0;
+  }
 
   .text-box {
     max-width: 50%;
@@ -154,7 +158,7 @@ const AboutSection = styled.div`
 
 const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <h1 className="section-title">
         <span>-</span> ABOUT :
       </h1>
@@ -167,7 +171,7 @@ const About = () => {
           have worked as a composer and developed a passion for programming as a
           sound designer for games. I have an interest in all areas of
           development, particularly AI and machine learning. Below are some the
-          recent technologies i've used:
+          recent technologies I've used:
         </p>
       </div>
       <section className="slide-option">

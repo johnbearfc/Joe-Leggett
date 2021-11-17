@@ -6,6 +6,10 @@ const html = {
   backgroundColor: "#edf2ef",
 };
 
+const body = {
+  marginBottom: 0,
+};
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes} style={html}>
@@ -18,7 +22,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes}>
+      <body style={body} {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           key={`body`}
