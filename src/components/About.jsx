@@ -24,19 +24,6 @@ const AboutSection = styled.div`
     // border-radius: 2px;
     // box-shadow: 5px 5px 29px 5px rgba(237, 242, 239, 0.02);
   }
-  .skills {
-    width: 70%;
-    color: #233d4d;
-    font-weight: 700;
-    text-align: center;
-    border: 2px solid #233d4d;
-    margin: 20px auto 30px 13%;
-    word-spacing: 3px;
-    background-color: #8faaab;
-    padding: 20px;
-    border-radius: 1px;
-    box-shadow: -1px 2px 11px 5px rgba(0, 0, 0, 0.1);
-  }
 
   section {
     display: flex;
@@ -65,7 +52,7 @@ const AboutSection = styled.div`
   div.highway-slider {
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 96%;
     height: 100px;
 
     div.highway-barrier {
@@ -80,7 +67,7 @@ const AboutSection = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #8faaab;
+        background: #edf2ef;
         color: #343434;
       }
     }
@@ -112,9 +99,9 @@ const AboutSection = styled.div`
     }
   }
   #infinite div.highway-barrier {
-    background: #8faaab;
-    border: 2px solid #233d4d;
-    box-shadow: -1px 2px 11px 5px rgba(0, 0, 0, 0.1);
+    background: #edf2ef;
+    // border: 2px solid #233d4d;
+    // box-shadow: -1px 2px 11px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     &::before,
     &::after {
@@ -129,8 +116,8 @@ const AboutSection = styled.div`
       left: 0;
       background: linear-gradient(
         to right,
-        rgba(143, 170, 171, 1) 0%,
-        rgba(143, 170, 171, 0) 100%
+        rgba(237, 242, 239, 1) 0%,
+        rgba(237, 242, 239, 0) 100%
       );
     }
     &::after {
@@ -138,8 +125,8 @@ const AboutSection = styled.div`
       right: 0;
       background: linear-gradient(
         to left,
-        rgba(143, 170, 171, 1) 0%,
-        rgba(143, 170, 171, 0) 100%
+        rgba(237, 242, 239, 1) 0%,
+        rgba(237, 242, 239, 0) 100%
       );
     }
     ul.highway-lane {
