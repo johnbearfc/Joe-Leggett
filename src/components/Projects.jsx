@@ -4,7 +4,6 @@ import vitaleaf from "../images/vitaleaf.jpg";
 
 const ProjectsSection = styled.div`
   z-index: 1;
-  bottom: 150px;
 
   .dash {
     color: #ff8000;
@@ -27,30 +26,70 @@ const ProjectsSection = styled.div`
 
   .text-box {
     max-width: 50%;
+    padding: 5px 20px 0 20px;
     // color: #233d4d;
     // background-color: #8faaab;
-  }
-
-  p {
     font-family: "Libre Baskerville", sans-serif;
 
     font-size: 0.9rem;
   }
 
+  .tech-box {
+    font-weight: 700;
+    padding: 5px 20px 10px 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    // color: #233d4d;
+
+    font-family: "Syne", sans-serif;
+  }
+
+  h2 {
+    font-family: "Syne", sans-serif;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0 0 0 10px;
+    padding: 0;
+  }
+
+  .skills {
+    font-weight: 700;
+    word-spacing: 3px;
+  }
+
   img {
-    width: 60%;
-    border-radius: 1px;
-    margin: 10px 20% 10px 20%;
-    // border: 2px solid #8faaab;
-    // filter: grayscale(30%);
+    // position: relative;
+    // bottom: -3px;
+    width: 100%;
+  }
+
+  .nav-box {
+    padding: 10px;
+    text-align: center;
+  }
+  a {
+    color: #233d4d;
+
+    margin-right: 10px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ff8000;
   }
 `;
 
 const ProjectWrapper = styled.section`
-  // border: 2px solid #0b0d0d;
+  // border: 1px solid #233d4d;
+  border: 2px solid #233d4d;
+
+  box-shadow: -1px 2px 11px 5px rgba(0, 0, 0, 0.1);
+  width: 70%;
   border-radius: 1px;
+  margin: 35px 15% 10px 15%;
   background-color: #8faaab;
-  padding: 5px 20px 10px 20px;
 `;
 
 const Projects = () => {
@@ -60,16 +99,40 @@ const Projects = () => {
         <span className="dash">-</span> PROJECTS :
       </h1>
       <ProjectWrapper>
+        <img src={vitaleaf} />
         <div className={"text-box"}>
           <h2>Vitaleaf</h2>
           <p>
-            Board Quest allows table top enthusiasts to explore the world of
-            board games together and speak of their tales along the way.
-            Interacting with the API allows users to browse, post and vote on
-            reviews and comments.
+            Vitaleaf is a houseplant care and identification app. Users can add
+            plants to their inventory, store images, get notified for the
+            watering of their plants according to their individual requirements,
+            and identify their plant using Vitaleaf's image recognition feature.
           </p>
         </div>
-        <img src={vitaleaf} />
+        <div className="tech-box">
+          <p>TECH USED:</p>
+          <p className="skills">
+            Node.js / TypeScript / React Native / AWS API Gateway / AWS DynamoDB
+            / AWS S3 / AWS Lambda / AWS Cognito /
+          </p>
+        </div>
+        <div className="nav-box">
+          <br />
+          <span className="dash">/ </span>
+          <a
+            href="https://github.com/johnbearfc/404-Project-BE"
+            target="_blank"
+          >
+            GitHub (be)
+          </a>
+          <span className="dash">/ </span>
+          <a
+            href="https://github.com/johnbearfc/404-Project-FE"
+            target="_blank"
+          >
+            GitHub (fe)
+          </a>
+        </div>
       </ProjectWrapper>
       <div className="break">
         <span>-------</span>
