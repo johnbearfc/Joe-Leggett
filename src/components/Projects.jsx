@@ -1,48 +1,81 @@
-import React from 'react'
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
+import vitaleaf from "../images/vitaleaf.jpg";
 
 const ProjectsSection = styled.div`
-  position: relative;
   z-index: 1;
   bottom: 150px;
 
-  span {
+  .dash {
     color: #ff8000;
   }
 
-  h1 {
-      text-align: left;
+  .break {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
   }
+
+  .section-title {
+    font-style: italic;
+  }
+  border-top: 2px solid #0b0d0d;
 
   h2 {
-    color: #ff8000;
+    text-decoration: underline;
   }
 
   .text-box {
-      background-color: #233d4d;
-      padding: 20px;
-      border-radius: 5px;
+    max-width: 50%;
+    // color: #233d4d;
+    // background-color: #8faaab;
   }
 
   p {
-      max-width: 50%;
-      color: #edf2ef;
-      font-size: 18px;
-      display: inline-block;
+    font-family: "Libre Baskerville", sans-serif;
+
+    font-size: 0.9rem;
   }
-  
-`
+
+  img {
+    width: 60%;
+    border-radius: 1px;
+    margin: 10px 20% 10px 20%;
+    // border: 2px solid #8faaab;
+    // filter: grayscale(30%);
+  }
+`;
+
+const ProjectWrapper = styled.section`
+  // border: 2px solid #0b0d0d;
+  border-radius: 1px;
+  background-color: #8faaab;
+  padding: 5px 20px 10px 20px;
+`;
 
 const Projects = () => {
-    return (
-        <ProjectsSection>
-            <h1><span>-</span> PROJECTS</h1>
-            <div className={'text-box'}>
-                <h2>Board Quest</h2>
-                <p>Board Quest allows table top enthusiasts to explore the world of board games together and speak of their tales along the way. Interacting with the API allows users to browse, post and vote on reviews and comments. Created using Express.js and PostgreSQL.</p>
-            </div>
-        </ProjectsSection>
-    )
-}
+  return (
+    <ProjectsSection>
+      <h1 className="section-title">
+        <span className="dash">-</span> PROJECTS :
+      </h1>
+      <ProjectWrapper>
+        <div className={"text-box"}>
+          <h2>Vitaleaf</h2>
+          <p>
+            Board Quest allows table top enthusiasts to explore the world of
+            board games together and speak of their tales along the way.
+            Interacting with the API allows users to browse, post and vote on
+            reviews and comments.
+          </p>
+        </div>
+        <img src={vitaleaf} />
+      </ProjectWrapper>
+      <div className="break">
+        <span>-------</span>
+      </div>
+    </ProjectsSection>
+  );
+};
 
-export default Projects
+export default Projects;

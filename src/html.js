@@ -1,11 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 const html = {
   margin: 0,
-  marginTop: '30px',
   backgroundColor: "#edf2ef",
-}
+};
 
 export default function HTML(props) {
   return (
@@ -19,7 +18,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} >
+      <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -29,7 +28,7 @@ export default function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -39,4 +38,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};

@@ -9,12 +9,17 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Rubik']
-        }
-      }
+          families: [
+            "Montserrat:400,500,600,700,800,900,400i,500i,600i,700i,800i,900i",
+            "Syne:400,500,600,700,800,900,400i,500i,600i,700i,800i,900i",
+            "Libre Baskerville:400,500,600,700,800,900,400i,500i,600i,700i,800i,900i",
+            "Quicksand",
+          ],
+        },
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
