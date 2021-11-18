@@ -7,6 +7,7 @@ import neuronet from "../images/neuronet.jpeg";
 
 const ProjectsSection = styled.div`
   z-index: 1;
+  border-top: 2px solid #0b0d0d;
 
   .dash {
     color: #ff8000;
@@ -18,10 +19,23 @@ const ProjectsSection = styled.div`
     font-size: 1.5rem;
   }
 
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .section-title {
     font-style: italic;
   }
-  border-top: 2px solid #0b0d0d;
 
   h2 {
     text-decoration: underline;
@@ -30,22 +44,19 @@ const ProjectsSection = styled.div`
   .text-box {
     max-width: 50%;
     padding: 5px 20px 0 20px;
-    // color: #233d4d;
-    // background-color: #8faaab;
     font-family: "Libre Baskerville", sans-serif;
-
+    @media only screen and (max-width: 600px) {
+      max-width: 100%;
+    }
     font-size: 0.9rem;
   }
 
   .tech-box {
-    // color: #233d4d;
-
-    font-weight: 700;
     padding: 5px 20px 0 20px;
+    font-family: "Syne", sans-serif;
+    font-weight: 700;
     font-size: 0.9rem;
     text-align: center;
-
-    font-family: "Syne", sans-serif;
   }
 
   h2 {
@@ -64,8 +75,6 @@ const ProjectsSection = styled.div`
   }
 
   img {
-    // position: relative;
-    // bottom: -3px;
     width: 100%;
   }
 
@@ -80,11 +89,10 @@ const ProjectsSection = styled.div`
     padding: 0 0 20px 0;
     text-align: center;
   }
+
   a {
     color: #233d4d;
-
     margin-right: 10px;
-    // text-decoration: none;
   }
 
   a:hover {
@@ -93,13 +101,16 @@ const ProjectsSection = styled.div`
 `;
 
 const ProjectWrapper = styled.section`
-  // border: 1px solid #233d4d;
-
   box-shadow: -1px 2px 11px 5px rgba(0, 0, 0, 0.2);
   width: 70%;
   border-radius: 1px;
   margin: 35px 15% 35px 15%;
   background-color: #8faaab;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 const Projects = () => {
@@ -109,15 +120,27 @@ const Projects = () => {
         <span className="dash">-</span> PROJECTS :
       </h1>
       <ProjectWrapper>
-        <img src={vitaleaf} />
+        <img src={vitaleaf} alt="vitaleaf logo" />
         <div className={"text-box"}>
           <h2>Vitaleaf</h2>
           <p>
             Vitaleaf is a houseplant care and identification app. Users can add
-            plants to their inventory, store images, get notified for the
-            watering of their plants according to their individual requirements,
-            and identify their plant using Vitaleaf's image recognition feature.
+            plants to their inventory, store images, receive notification
+            reminders for the watering of their plants (according to their
+            individual requirements), and identify plants using Vitaleaf's image
+            recognition feature.
           </p>
+        </div>
+        <div className="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/9oega-ov2Mc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <div className="tech-box">
           <p>TECH USED:</p>
@@ -132,6 +155,7 @@ const Projects = () => {
           <a
             href="https://github.com/johnbearfc/404-Project-BE"
             target="_blank"
+            rel="noreferrer"
           >
             GitHub (be)
           </a>
@@ -139,6 +163,7 @@ const Projects = () => {
           <a
             href="https://github.com/johnbearfc/404-Project-FE"
             target="_blank"
+            rel="noreferrer"
           >
             GitHub (fe)
           </a>
@@ -148,7 +173,7 @@ const Projects = () => {
         <span>-------</span>
       </div>
       <ProjectWrapper>
-        <img src={boardquest} className="filt-img" />
+        <img src={boardquest} className="filt-img" alt="Board Quest" />
         <div className={"text-box"}>
           <h2>Board Quest</h2>
           <p>
@@ -165,18 +190,27 @@ const Projects = () => {
         <div className="nav-box">
           <p>-</p>
           <span className="dash">/ </span>
-          <a href="https://boardquest.netlify.app/" target="_blank">
+          <a
+            href="https://boardquest.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Netlify
           </a>
           <span className="dash">/ </span>
           <a
             href="https://github.com/johnbearfc/nc-board-quest"
             target="_blank"
+            rel="noreferrer"
           >
             GitHub (be)
           </a>
           <span className="dash">/ </span>
-          <a href="https://github.com/johnbearfc/nc-games" target="_blank">
+          <a
+            href="https://github.com/johnbearfc/nc-games"
+            target="_blank"
+            rel="noreferrer"
+          >
             GitHub (fe)
           </a>
         </div>
@@ -185,7 +219,7 @@ const Projects = () => {
         <span>-------</span>
       </div>
       <ProjectWrapper>
-        <img src={metmap2} />
+        <img src={metmap2} alt="Meteor Map" />
         <div className={"text-box"}>
           <h2>Meteor Map</h2>
           <p>
@@ -200,13 +234,18 @@ const Projects = () => {
         <div className="nav-box">
           <p>-</p>
           <span className="dash">/ </span>
-          <a href="https://meteormap.netlify.app/" target="_blank">
+          <a
+            href="https://meteormap.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Netlify
           </a>
           <span className="dash">/ </span>
           <a
             href="https://github.com/johnbearfc/fe-react-data-visualisation"
             target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>
@@ -216,7 +255,7 @@ const Projects = () => {
         <span>-------</span>
       </div>
       <ProjectWrapper>
-        <img src={neuronet} />
+        <img src={neuronet} alt="NeuroNet" />
         <div className={"text-box"}>
           <h2>NeuroNet</h2>
           <p>
@@ -236,6 +275,7 @@ const Projects = () => {
           <a
             href="https://store.steampowered.com/app/1423000/NeuroNet_Mendax_Proxy/"
             target="_blank"
+            rel="noreferrer"
           >
             Steam
           </a>

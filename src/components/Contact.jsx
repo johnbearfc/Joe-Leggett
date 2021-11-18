@@ -3,6 +3,9 @@ import styled from "styled-components";
 import * as Ri from "react-icons/ri";
 
 const ContactSection = styled.div`
+  margin: 60px 0 60px 0;
+  border-top: 2px solid #0b0d0d;
+
   span {
     color: #ff8000;
   }
@@ -10,18 +13,15 @@ const ContactSection = styled.div`
   .section-title {
     font-style: italic;
   }
-  border-top: 2px solid #0b0d0d;
-
-  margin: 60px 0 60px 0;
 
   .text-box {
     max-width: 50%;
-    font-family: "Libre Baskerville", sans-serif;
-
-    // border: 1px solid #edf2ef;
     padding: 0 20px 0px 20px;
-    // border-radius: 2px;
-    // box-shadow: 5px 5px 29px 5px rgba(237, 242, 239, 0.02);
+
+    font-family: "Libre Baskerville", sans-serif;
+    @media only screen and (max-width: 600px) {
+      max-width: 100%;
+    }
   }
 
   p {
@@ -35,10 +35,18 @@ const ContactSection = styled.div`
     border: 2px dashed #8faaab;
   }
 
+  a {
+    color: #233d4d;
+    text-align: center;
+  }
+
   .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2.5rem;
-    width: 30%;
-    margin: 30px 35% 0 33.6%;
+    max-width: 250px;
+    margin: 30px auto;
     padding: 20px;
     color: #233d4d;
     border: 2px dashed #233d4d;
@@ -59,9 +67,11 @@ const Contact = () => {
           say hello, get in touch:
         </p>
       </div>
-      <a href="mailto:jclleggett@gmail.com">
-        <Ri.RiMailSendLine className="icon" />
-      </a>
+      <div className="icon">
+        <a href="mailto:jclleggett@gmail.com">
+          <Ri.RiMailSendLine />
+        </a>
+      </div>
     </ContactSection>
   );
 };

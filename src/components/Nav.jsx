@@ -7,20 +7,24 @@ const StyledNav = styled.nav`
   position: fixed;
   z-index: 10;
   left: 0;
+  right: 0;
   top: 0;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #0b0d0d;
   font-weight: 700;
   text-align: right;
-  width: 100%;
   color: #ff8000;
   background-color: #edf2ef;
 
   @media only screen and (max-width: 600px) {
-    // width: 100vw;
+    margin-right: 10px;
   }
-  padding-bottom: 15px;
-  border-bottom: 2px solid #0b0d0d;
 
   a {
+    @media only screen and (max-width: 600px) {
+      margin-right: 20px;
+    }
     color: #0b0d0d;
     font-weight: 700;
     margin-right: 30px;
@@ -54,7 +58,11 @@ const Nav = () => {
         <span>/ </span>
         <AnchorLink to="/#contact">Contact</AnchorLink>
         <span>/ </span>
-        <a href="https://github.com/johnbearfc" target="_blank">
+        <a
+          href="https://github.com/johnbearfc"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Bs.BsGithub />
         </a>
       </div>

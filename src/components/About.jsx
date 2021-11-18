@@ -22,11 +22,10 @@ const AboutSection = styled.div`
   .text-box {
     max-width: 50%;
     font-family: "Libre Baskerville", sans-serif;
-
-    // border: 1px solid #edf2ef;
     padding: 0 20px 0px 20px;
-    // border-radius: 2px;
-    // box-shadow: 5px 5px 29px 5px rgba(237, 242, 239, 0.02);
+    @media only screen and (max-width: 600px) {
+      max-width: 100%;
+    }
   }
 
   section {
@@ -104,8 +103,6 @@ const AboutSection = styled.div`
   }
   #infinite div.highway-barrier {
     background: #edf2ef;
-    // border: 2px solid #233d4d;
-    // box-shadow: -1px 2px 11px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     &::before,
     &::after {

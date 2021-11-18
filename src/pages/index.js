@@ -19,20 +19,22 @@ const Main = styled.main`
 
   @media only screen and (max-width: 600px) {
     width: 100%;
+    max-width: 100%;
+
     margin: 0;
+    padding: 0;
     border: 0px solid #0b0d0d;
   }
 `;
 
 const Heading = styled.h1`
-  font-size: 4rem;
   margin-top: 140px;
   margin-bottom: 26px;
-  max-width: 70%;
-  line-height: 0.7;
-  font-weight: 700;
-  // font-style: italic;
   padding-right: 96px;
+  max-width: 70%;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.7;
 `;
 
 const SubH = styled.span`
